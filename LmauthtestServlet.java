@@ -43,6 +43,9 @@ public class LmauthtestServlet extends HttpServlet {
 		if(idTokenString != null && !idTokenString.equals("")){
 			GoogleIdTokenVerifier verifier = new GoogleIdTokenVerifier.Builder(transport, jsonFactory)
 				.setAudience(Arrays.asList(ENTER_YOUR_SERVER_CLIENT_ID_HERE))
+				// To learn about getting a Server Client ID, see this link
+				// https://developers.google.com/identity/sign-in/android/start
+				// And follow step 4
 				.setIssuer("https://accounts.google.com").build();
 		
 			try{
