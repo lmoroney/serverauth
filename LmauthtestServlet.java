@@ -42,7 +42,7 @@ public class LmauthtestServlet extends HttpServlet {
 		
 		if(idTokenString != null && !idTokenString.equals("")){
 			GoogleIdTokenVerifier verifier = new GoogleIdTokenVerifier.Builder(transport, jsonFactory)
-				.setAudience(Arrays.asList("48100979992-12u9s24hq2um6mo0en6la0vdmgilqp3i.apps.googleusercontent.com"))
+				.setAudience(Arrays.asList(ENTER_YOUR_SERVER_CLIENT_ID_HERE))
 				.setIssuer("https://accounts.google.com").build();
 		
 			try{
