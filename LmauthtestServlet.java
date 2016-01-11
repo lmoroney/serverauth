@@ -53,6 +53,15 @@ public class LmauthtestServlet extends HttpServlet {
 				if (idToken != null) {
 					Payload payload = idToken.getPayload();
 					returnVal = "User ID: " + payload.getSubject();
+					// You can also access the following properties of the payload in order
+					// for other attributes of the user. 
+					// String email = payload.getEmail();
+					// boolean emailVerified = Boolean.valueOf(payload.getEmailVerified());
+					// String name = (String) payload.get("name");
+					// String pictureUrl = (String) payload.get("picture");
+					// String locale = (String) payload.get("locale");
+					// String familyName = (String) payload.get("family_name");
+					// String givenName = (String) payload.get("given_name");
 				} else {
 					returnVal = "Invalid ID token.";
 				}
