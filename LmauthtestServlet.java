@@ -54,7 +54,9 @@ public class LmauthtestServlet extends HttpServlet {
 					Payload payload = idToken.getPayload();
 					returnVal = "User ID: " + payload.getSubject();
 					// You can also access the following properties of the payload in order
-					// for other attributes of the user. 
+					// for other attributes of the user. Note that these fields are only
+					// available if the user has granted the 'profile' and 'email' OAuth
+					// scopes when requested.
 					// String email = payload.getEmail();
 					// boolean emailVerified = Boolean.valueOf(payload.getEmailVerified());
 					// String name = (String) payload.get("name");
